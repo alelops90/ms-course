@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="hr-worker" />
         <module name="hr-payroll" />
+        <module name="hr-eurekaserver" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +20,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="demo" options="-parameters" />
       <module name="demo1" options="-parameters" />
+      <module name="hr-eurekaserver" options="-parameters" />
       <module name="hr-payroll" options="-parameters" />
       <module name="hr-worker" options="-parameters" />
     </option>

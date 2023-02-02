@@ -38,4 +38,10 @@ public class WorkerResources {
         Worker worker = repository.findById(id).get();
         return ResponseEntity.ok(worker);
     }
+
+    @GetMapping("/1")
+    public ResponseEntity<Worker> findByMe(){
+        Worker worker = new Worker(1L,"Mago", 200.0);
+        return ResponseEntity.ok(worker);
+    }
 }

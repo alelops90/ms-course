@@ -3,6 +3,7 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/demo" />
+    <file type="web" url="file://$PROJECT_DIR$/hr-api-gateway-zuul" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -10,6 +11,7 @@
         <option value="$PROJECT_DIR$/hr-worker/pom.xml" />
         <option value="$PROJECT_DIR$/hr-payroll/pom.xml" />
         <option value="$PROJECT_DIR$/hr-eurekaserver/pom.xml" />
+        <option value="$PROJECT_DIR$/hr-api-gateway-zuul/pom.xml" />
       </list>
     </option>
   </component>

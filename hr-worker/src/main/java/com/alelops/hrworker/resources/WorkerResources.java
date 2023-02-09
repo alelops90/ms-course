@@ -5,6 +5,7 @@ import com.alelops.hrworker.repositories.WorkerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,28 +21,31 @@ public class WorkerResources {
 
     private static Logger logger = LoggerFactory.getLogger(WorkerResources.class);
 
+    @Value("${test.config}")
+    private String testconfig;
+
     @Autowired
     private Environment environment;
 
     @Autowired
     private WorkerRepository repository;
 
+    @GetMapping("/configs")
+    public ResponseEntity getConfig() {
+        logger.info("config= " + testconfig);
+        return ResponseEntity.noContent().build();
+    }
+
     @GetMapping("/all")
-    public ResponseEntity<List<Worker>> findAll(){
+    public ResponseEntity<List<Worker>> findAll() {
         List<Worker> list = repository.findAll();
         return ResponseEntity.ok(list);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Worker> findById(@PathVariable Long id){
+    public ResponseEntity<Worker> findById(@PathVariable Long id) {
         logger.info("port = " + environment.getProperty("local.server.port"));
         Worker worker = repository.findById(id).get();
-        return ResponseEntity.ok(worker);
-    }
-
-    @GetMapping("/1")
-    public ResponseEntity<Worker> findByMe(){
-        Worker worker = new Worker(1L,"Mago", 200.0);
         return ResponseEntity.ok(worker);
     }
 }

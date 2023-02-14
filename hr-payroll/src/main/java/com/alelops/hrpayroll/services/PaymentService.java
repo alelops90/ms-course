@@ -14,6 +14,6 @@ public class PaymentService {
 
     public Payment getPayment(Long id, int days) {
         Worker worker = workerFeignClient.findById(id).getBody();
-        return new Payment(worker.getName(), worker.getDailyInCome(), days);
+        return new Payment(worker.getName(), worker.getDailyIncome(), days);
     }
 }

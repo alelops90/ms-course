@@ -25,7 +25,7 @@ public class PaymentResources {
     }
 
     public ResponseEntity<Payment> getPaymentAlternative(Long id, Integer days) {
-        Payment payment = new Payment("Brann", 400.0, days);
+        Payment payment = paymentService.getPayment(id, days);
         return ResponseEntity.ok(payment);
     }
 }

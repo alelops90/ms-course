@@ -11,6 +11,7 @@
         <module name="hr-worker" />
         <module name="hr-eurekaserver" />
         <module name="hr-api-gateway-zuul" />
+        <module name="hr-user" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -26,6 +27,7 @@
       <module name="hr-config-server" options="-parameters" />
       <module name="hr-eurekaserver" options="-parameters" />
       <module name="hr-payroll" options="-parameters" />
+      <module name="hr-user" options="-parameters" />
       <module name="hr-worker" options="-parameters" />
     </option>
   </component>
